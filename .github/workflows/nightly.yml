@@ -30,8 +30,16 @@ jobs:
           KEY=$(cat indexnow-key.txt)
           HOST=blog.codefixcoffee.com
           URL="${{ steps.pub.outputs.url }}"
-          curl -s "https://api.indexnow.org/update?url=${URL}&key=${KEY}" || true
-          curl -s "https://api.indexnow.org/update?url=https://${HOST}/&key=${KEY}" || true
+          python3 - <<'PY'
+          import json, urllib.request
+          key = open("indexnow-key.txt").read().strip()
+          host = "blog.codefixcoffee.com"
+          urls = ["", f"https://{host}/"]
+          body = json.dumps({"host": host, "key": key, "keyLocation": f"https://{host}/{key}.txt", "urlList": urls}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/IndexNow?url=&json=true", data=body, headers={"Content-Type": "application/json; charset=utf-8"})
+          try: print("indexnow", urllib.request.urlopen(req, timeout=20).status)
+          except Exception as e: print("indexnow skipped:", e)
+          PY
       - name: Remind to refill bank
         if: steps.pub.outputs.empty == 'true'
         run: gh issue create --title "Blog bank is empty" --body "The nightly publisher found no queued posts. Add new .md files to bank/." || true
