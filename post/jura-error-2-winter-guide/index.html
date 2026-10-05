@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jura Error 2 in winter: the cold-machine cause nobody tells you about</title>
+<meta name="description" content="Jura Error 2 is often not a broken part. Below about 10 C the heater locks out. The warming protocol, and when it really is the sensor or fuse cords.">
+<link rel="canonical" href="https://blog.codefixcoffee.com/post/jura-error-2-winter-guide/">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/rss.xml">
+</head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/">☕ CodeFix Blog</a><span><a href="https://codefixcoffee.com">Error-code database →</a></span></div></header>
+<main>
+<h1>Jura Error 2 in winter: the cold-machine cause nobody tells you about</h1>
+<p class="meta">2026-10-05</p>
+<p>Error 2 is the most common code on Jura automatic machines — the E, ENA, S, J, Z and GIGA ranges all share the same numbered set — and it has two very different faces. Either the coffee thermoblock's temperature-sensor circuit has gone open circuit, or the machine is simply too cold to heat. In winter the second one catches out a surprising number of owners who have done nothing wrong, and it is the cause the error message itself never hints at. The full reference is on the <a href="https://codefixcoffee.com/jura/automatic-machines/error-2/">Jura Error 2 page</a>; this article is about the cold half of the story.</p>
+<h2>What the machine is actually telling you</h2>
+<p>Jura's Errors 1 to 5 all concern the thermoblock heaters and their sensors. When the electronics see a temperature reading they cannot reconcile with the heating they commanded, they shut the heater down and refuse to retry — a protective lockout, not necessarily a failure. Below roughly 10 °C, a cold thermoblock sits far outside the range the board expects, and the machine treats that exactly as it would a faulty sensor. Nothing is broken. The machine is cold.</p>
+<p>The scenario is classic: a machine delivered in winter after a ride in an unheated van, a Jura kept in a cold kitchen, conservatory, garage office or holiday home, or one freshly unboxed and started straight away. The pattern is always the same — it worked fine before, Error 2 appears at the first start-up, and nothing you press clears it.</p>
+<p>Coffee machines in general dislike starting cold. Philips and Saeco machines have an equivalent code: Error 11 or 19 means the machine needs to adjust to room temperature after cold transport — see <a href="https://codefixcoffee.com/philips-saeco/espresso-machines/error-11-or-19/">Philips Error 11 or 19</a> for that brand's version.</p>
+<h2>The warming protocol</h2>
+<p>Run this before concluding anything is broken. It costs nothing and it is always the first thing to try on a cold machine.</p>
+<ol>
+<li>Move the machine to a heated room and give it time — several hours to reach true room temperature, not just to feel less cold on the outside. A chassis that seems fine can still hold a thermoblock well below 10 °C.</li>
+<li>To speed things up, run a hair dryer on its lowest setting into the water-tank cavity for about five minutes, or fill the tank with warm — not hot — tap water.</li>
+<li>Restart the machine.</li>
+<li>If Error 2 clears after warming, nothing has failed. Keep the machine somewhere warmer and the code will not return.</li>
+</ol>
+<p>Two cautions. Warm water means warm, not hot: the tank, its valves and seals are plastic. And do not aim concentrated heat at the machine's body or electronics — the goal is to take the chill off the thermoblock, not to cook the wiring around it.</p>
+<h2>When it really is the NTC sensor or the thermal-fuse cords</h2>
+<p>If the machine has genuinely warmed — it has stood for hours in a heated room — and Error 2 still appears, the benign explanation is gone and the sensor circuit is open. Inside a Jura that means one of two findings:</p>
+<ul>
+<li>The NTC temperature sensor on the coffee thermoblock has failed, or its plug is no longer making contact. The sibling code is <a href="https://codefixcoffee.com/jura/automatic-machines/error-1/">Jura Error 1</a>, the coffee-thermoblock sensor fault proper; the two faults share parts and symptoms.</li>
+<li>The two thermal-fuse cords that protect the thermoblock have gone open circuit — they blow after an overheat, or simply with age. A blown fuse cord reads open on a multimeter.</li>
+</ul>
+<p>The repair is usually worthwhile. A genuine Jura NTC sensor runs about €25 to €40 and a thermal-fuse cord set €15 to €30; technicians normally replace both together because the labour is the same. Even a full thermoblock, at €90 to €180, can still make sense on the higher machines. If your Jura was warm all along, this — not the weather — is your Error 2.</p>
+<h2>The warning sign after the repair</h2>
+<p>One trap deserves its own paragraph. A thermal-fuse cord that has blown once will blow again if the power board is latching the heater on. If a newly fitted fuse cord fails within days, stop replacing fuses: the power board is the fault. A board typically costs €120 to €250 plus labour, which on an older machine belongs in a quote-versus-replacement conversation rather than a parts order.</p>
+<h2>Safety, and knowing your limits</h2>
+<p>Opening a Jura is not like opening a kettle. The case is held with oval-head Torx-Plus security screws, and the thermoblocks carry mains voltage. If you do not have the driver, a meter, and comfort working around mains, this stage is a bench repair. The warming protocol is the user-level half of the Error 2 story; the sensor and fuse cords are the workshop half.</p>
+<p>The economics stay friendly either way. Warming costs nothing, and the realistic parts bill for the sensor-and-fuse-cord fix sits under about €50. For the rest of the brand's code set — the valve, brew-group and heater codes across every model range — start from the <a href="https://codefixcoffee.com/jura/">Jura overview</a>. And if there are other coffee machines in the house, Miele's CM and CVA systems use an F-number code scheme, indexed under <a href="https://codefixcoffee.com/miele/">Miele</a>.</p>
+</main>
+<footer>CodeFix Blog — repair guides and appliance error-code explainers from <a href="https://codefixcoffee.com">codefixcoffee.com</a>.</footer>
+</body></html>
