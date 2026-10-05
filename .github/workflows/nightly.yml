@@ -24,6 +24,7 @@ jobs:
           git commit -m "nightly post: ${{ steps.pub.outputs.title }}" || echo "nothing to commit"
           git push
       - name: Ping IndexNow
+        continue-on-error: true  # self-heals once DNS points at GitHub Pages
         if: steps.pub.outputs.url != ''
         run: |
           KEY=$(cat indexnow-key.txt)
