@@ -1,0 +1,38 @@
+name: nightly-post
+on:
+  schedule:
+    - cron: "20 2 * * *"   # 02:20 UTC nightly = 04:20 Zurich, runs on GitHub infra
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: nightly
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish next post from bank
+        id: pub
+        run: python3 scripts/publish.py
+      - name: Commit and push
+        run: |
+          git config user.name "blog-bot"
+          git config user.email "blog-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "nightly post: ${{ steps.pub.outputs.title }}" || echo "nothing to commit"
+          git push
+      - name: Ping IndexNow
+        if: steps.pub.outputs.url != ''
+        run: |
+          KEY=$(cat indexnow-key.txt)
+          HOST=blog.codefixcoffee.com
+          URL="${{ steps.pub.outputs.url }}"
+          curl -s "https://api.indexnow.org/update?url=${URL}&key=${KEY}" || true
+          curl -s "https://api.indexnow.org/update?url=https://${HOST}/&key=${KEY}" || true
+      - name: Remind to refill bank
+        if: steps.pub.outputs.empty == 'true'
+        run: gh issue create --title "Blog bank is empty" --body "The nightly publisher found no queued posts. Add new .md files to bank/." || true
+        env:
+          GH_TOKEN: ${{ github.token }}
