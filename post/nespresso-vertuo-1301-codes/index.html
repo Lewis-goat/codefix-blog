@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>"Nespresso Vertuo 1301–1305 Codes on Connected Machines"</title>
+<meta name="description" content=""What the Nespresso Vertuo 1301–1305 codes mean on connected machines, how the pod sensor and descale circuit differ, and the reset-descale-clean fix."">
+<link rel="canonical" href="https://blog.codefixcoffee.com/post/nespresso-vertuo-1301-codes/">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/rss.xml">
+</head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/">☕ CodeFix Blog</a><span><a href="https://codefixcoffee.com">Error-code database →</a></span></div></header>
+<main>
+<h1>"Nespresso Vertuo 1301–1305 Codes on Connected Machines"</h1>
+<p class="meta">2026-10-17</p>
+<h2>What the 1300 family actually reports</h2>
+<p>Nespresso does not publish an official table for the 1300-family codes, which is why searching for "Vertuo error 1301" turns up forum threads rather than a manual page. What owner reports consistently show is a family that covers two systems on connected Vertuo machines: the <strong>descale circuit</strong>, meaning a machine stuck in, or overdue for, descaling mode, and the <strong>capsule sensor</strong> that reads the pod. Code 1301 is the one most often reported, with the neighbouring codes 1302 through 1305 appearing in the same family.</p>
+<p>The practical takeaway is that this family does not point to a single fault. It points to two, and usefully, both are addressed by the same official sequence of a factory reset, a full descale cycle, and cleaning the capsule window. Our dedicated <a href="https://codefixcoffee.com/nespresso/vertuo-machines/1301-1305/">1301–1305 code page</a> walks through that sequence in detail.</p>
+<h2>Pod sensor or descale circuit — telling the two apart</h2>
+<p>Before running the fix, it helps to know which half of the family your machine is in, because the symptoms differ:</p>
+<ul>
+<li><strong>Pod-sensor symptoms:</strong> the machine refuses to brew a capsule, or behaves as if no capsule is present even though one is loaded. The sensor window in the machine head is not reading the pod barcode, often because of coffee residue or debris.</li>
+<li><strong>Descale-circuit symptoms:</strong> the machine seems locked out of normal brewing, often alongside orange light activity. The classic trigger is a descale that was started and cancelled partway through, leaving the machine stuck in the mode.</li>
+</ul>
+<p>If you see blinking orange in any pattern, treat descaling as due regardless of what the app says — the <a href="https://codefixcoffee.com/nespresso/vertuo-machines/blinking-lights/">Vertuo blinking-lights decoder</a> explains how the colour and blink count map to heating, descale, and fault states.</p>
+<h2>Where you see the code: the app versus the machine itself</h2>
+<p>This is the part that confuses most owners. Vertuo machines have no text display — their interface is a single button, a lever, and a light ring, and the machine's native error language is light patterns, not numbers. The 1300-family numbers surface on the connected side: they are reported for machines paired with the Nespresso app and its connected features.</p>
+<p>That split has two consequences. First, an app code and a light pattern on the same machine are usually describing the same underlying state, so count what the light does (colour, steady versus blinking, blinks per group) before touching anything. Second, because Nespresso has never published the 1300-family table, the meaning of each individual number comes from owner reports, not documentation — which is why the reset-descale-clean sequence, not code-by-code diagnosis, is the reliable path. For everything else the light ring can tell you, start from the <a href="https://codefixcoffee.com/nespresso/">Nespresso section</a> of our site.</p>
+<h2>The fix sequence that clears most reports</h2>
+<p>Work through these in order, and let each step finish completely:</p>
+<ol>
+<li>Factory reset using the official procedure: with the handle in the UNLOCKED position, press the button five times within three seconds. The machine blinks orange five times to confirm.</li>
+<li>Run a complete descaling cycle with Nespresso descaler and let it finish uninterrupted. A cancelled descale is the classic way these machines get stuck in the mode, so this step does the heavy lifting.</li>
+<li>Remove the capsule holder and wipe the capsule window and machine head so the sensor can read the pod barcode.</li>
+<li>Empty and refill the water tank, then retest with a fresh capsule.</li>
+<li>If the code persists after the reset, descale, and cleaning, contact Nespresso support rather than continuing to retry.</li>
+</ol>
+<p>Two cautions: never force the head closed on a capsule, and never descale with vinegar — it damages the circuit and can void assistance.</p>
+<h2>Costs and expectations</h2>
+<p>The good news is that this family is usually free to fix. The reset-descale-clean sequence resolves most reports at a cost of €0 beyond descaler, which runs about €10 to €15 for the official product. If the sequence does not clear the fault, the outcome is typically not a repair but an exchange: Nespresso usually replaces faulty Vertuo machines under warranty rather than repairing them, so keep your purchase date handy when you contact support.</p>
+<p>If your machine is not showing a 13xx number but is behaving oddly, decode the light ring first — steady or repeating red means unplug for at least ten minutes and let it cool, while unending blinking orange points back to a descale that never finished, as covered in our <a href="https://codefixcoffee.com/nespresso/vertuo-machines/blinking-lights/">blinking-lights guide</a>. For the numeric codes themselves, the <a href="https://codefixcoffee.com/nespresso/vertuo-machines/1301-1305/">1301–1305 reference page</a> stays updated as more owner reports come in.</p>
+</main>
+<footer>CodeFix Blog — repair guides and appliance error-code explainers from <a href="https://codefixcoffee.com">codefixcoffee.com</a>.</footer>
+</body></html>
