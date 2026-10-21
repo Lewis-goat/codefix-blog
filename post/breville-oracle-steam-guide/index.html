@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breville/Sage Oracle steam and ER codes: what to check first</title>
+<meta name="description" content="Steam faults on the Breville/Sage Oracle: what the steam-side Error and ER codes mean, the purge routine to try first, and when scale is the real fault.">
+<link rel="canonical" href="https://blog.codefixcoffee.com/post/breville-oracle-steam-guide/">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/rss.xml">
+</head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/">☕ CodeFix Blog</a><span><a href="https://codefixcoffee.com">Error-code database →</a></span></div></header>
+<main>
+<h1>Breville/Sage Oracle steam and ER codes: what to check first</h1>
+<p class="meta">2026-10-21</p>
+<p>The steam side of a Breville Oracle is its busiest place: a stainless steam boiler, an auto-texturing wand, level probes and a fill pump, all at temperature daily. It also produces a large share of the machine's error codes. The Oracle family uses a 32-entry service table that Breville does not publish, and in the UK the same hardware wears a <strong>Sage</strong> badge — the codes are identical. Before you assume a broken part, work through the cheap checks: most steam-side stops are a blocked wand tip, a purge that did not happen, or limescale on a probe.</p>
+<h2>Where the steam codes sit in the Oracle table</h2>
+<p>The Oracle (BES980) and Oracle Touch (BES990) share one table; the BES980 shows entries as "Error 1" to "Error 32" while the BES990 prefixes them ER. The steam-related entries cluster in five places:</p>
+<ul>
+<li><strong>Error 1 to 4</strong> — the steam boiler temperature sensor, cycling through open circuit at start-up, lost during operation, and short circuit in both situations. One sensor, four ways to report it.</li>
+<li><strong>Error 13 to 16</strong> — the same quartet for the steam wand's own temperature sensor, the probe that stops auto-texturing at the right milk temperature. It lives in the wettest place on the machine.</li>
+<li><strong>Error 18</strong> — the steam boiler is not heating up normally.</li>
+<li><strong>Error 20 and 21</strong> — steam boiler water level or fill-pump problems, and a level-probe reading that does not match what the board expects.</li>
+<li><strong>Error 26</strong> — the steam boiler overheated above target; <strong>Error 32</strong> is a steam boiler leak or refill failure.</li>
+</ul>
+<p>Not everything near the wand is steam-side: codes 5 to 8 belong to the coffee boiler's sensor, with <a href="https://codefixcoffee.com/breville/oracle-bes980/error-8/">Error 8</a> its short-circuit-during-operation entry. Reading the stored log helps you tell the families apart — on the BES980, hold 1 CUP, 2 CUP and POWER together with the machine off to open Error Storage and step through all 32 codes with their counts.</p>
+<h2>What to check first: the purge routine</h2>
+<p>Weak or spluttering steam, or a code straight after a milk drink, usually points at the wand tip rather than the boiler:</p>
+<ol>
+<li>Unplug the machine and let the wand cool.</li>
+<li>Unscrew the steam tip and soak it in hot water with a little descaler; clear every hole with the pin on the cleaning tool.</li>
+<li>Run the purge — about ten seconds of steam into the drip tray with the tip off, then again with it on.</li>
+<li>Purge the wand after every milk session from now on; dried milk in the tip is what starts most of these stops.</li>
+</ol>
+<p>If the machine monitors steam pressure, as the Oracle Jet does with its E16 code, a crusted tip can trip a code before you even notice the steam has gone weak.</p>
+<h2>Hardness, scale and the level probes</h2>
+<p>Where the water is hard, scale writes its own error codes. The steam boiler's level probes sit in hot water constantly, and a scaled coating insulates them so the board reads "no water" even when the boiler is full — that is the classic route to Error 20 or 21, and to Error 32's refill failure. Scale also builds in the wand path and on the fill pump's inlet. A full descale, including the steam-boiler cycle, is the cheapest diagnostic you can run and clears a surprising number of these codes on its own.</p>
+<p>The sibling machine in the range makes the same point: the Dual Boiler keeps its codes 00 to 12 hidden in a self-check menu, and <a href="https://codefixcoffee.com/breville/dual-boiler-bes920/00/">code 00</a> — the steam boiler sensor not detected — sits at the top of a table whose level and fill entries behave exactly the same way under hard water.</p>
+<h2>When to descale rather than disassemble</h2>
+<p>Descale first, disassemble second — but know where descaling stops helping:</p>
+<ul>
+<li><strong>Descale first</strong> for level, probe and refill codes (20, 21, 32), for weak steam with no code, and for any machine more than three months since its last cycle. Cost: a bottle of descaler.</li>
+<li><strong>Descale will not fix</strong> a sensor code that returns immediately on a freshly descaled, warm machine — whether that is a steam-boiler entry from codes 1 to 4 or <a href="https://codefixcoffee.com/breville/oracle-bes980/error-8/">Error 8</a> on the coffee side. A code that survives a descale points at the sensor, its cable or a connector.</li>
+<li><strong>Stop and check seals</strong> if Error 26 recurs: a leaking steam-probe o-ring lets steam heat the sensor cable and mimics a runaway boiler. New probe o-rings are cheap; a triac board that will not switch the heater off is not.</li>
+<li><strong>Error 18</strong> on a machine that no longer heats steam at all is usually heater-side — thermal fuse, element or board — not scale, so treat it as a repair rather than a cleaning job.</li>
+</ul>
+<h2>What the parts cost</h2>
+<p>Genuine temperature-sensor assemblies run about €25 to €95 depending on which sensor it is; steam wand assemblies, which include their sensor, are around €60 to €95; a probe and o-ring kit is about €85 and a fill pump €30 to €60. Against that, out-of-warranty manufacturer quotes for internal faults are commonly €300 to €500, so a descaler bottle first and a sensor-level fix second is almost always the better arithmetic. UK readers will find the Sage-branded coverage of the same tables on the <a href="https://codefixcoffee.com/uk/">UK edition of the site</a>.</p>
+</main>
+<footer>CodeFix Blog — repair guides and appliance error-code explainers from <a href="https://codefixcoffee.com">codefixcoffee.com</a>.</footer>
+</body></html>
