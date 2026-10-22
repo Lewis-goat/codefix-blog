@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GE dishwasher C-codes: drain, fill and heat faults</title>
+<meta name="description" content="GE dishwasher C-codes C1-C8 cover drain, fill and heat faults, plus 888 and CFE board codes — and the service-menu trick that shows the last error.">
+<link rel="canonical" href="https://blog.codefixcoffee.com/post/ge-dishwasher-c-codes/">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/rss.xml">
+</head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/">☕ CodeFix Blog</a><span><a href="https://codefixcoffee.com">Error-code database →</a></span></div></header>
+<main>
+<h1>GE dishwasher C-codes: drain, fill and heat faults</h1>
+<p class="meta">2026-10-22</p>
+<p>GE dishwashers report faults as C-codes on the display: C1 through C8, plus H2O for fill problems and 888 or CFE when the boards themselves are unhappy. Unlike most manufacturers, GE publishes no official list of what each code means, so owners are left matching a two-character code to a symptom on their own. The <a href="https://codefixcoffee.com/ge/dishwasher/">GE dishwasher section</a> covers every code; this post walks the families in the order you are likely to meet them and ends with the service-menu trick that shows what the machine stored last.</p>
+<h2>The drain family: C1 to C3</h2>
+<p>Three codes, one system. C1 means the drain pump ran for more than two minutes without emptying the tub (on some older models it instead flags a stuck key); C2 means the pump did not run at all or the line was totally blocked; C3 is the general "not draining properly" entry. The suspects never change — a clogged filter and sump, a kinked drain hose, a garbage disposal fitted recently with its knockout plug still in place, or a failed drain pump. Start with the free work on the <a href="https://codefixcoffee.com/ge/dishwasher/c1/">C1 page</a>: pull the lower rack, clean the filter and sump, and check the hose under the sink. A drain pump is €40 to €80 if it turns out to be humming or silent.</p>
+<h2>Fill faults: C4, C5 and H2O</h2>
+<ul>
+<li><strong>C4</strong> — overfill, or the machine filled twice after a power cut. The inlet valve is not closing fully, or the float switch that should stop the fill is stuck with debris. See the <a href="https://codefixcoffee.com/ge/dishwasher/c4/">C4 page</a> for the float check; if the tub fills with the power off, the inlet valve is leaking through and must be replaced (€25 to €50).</li>
+<li><strong>C5</strong> — low fill: not enough water arrived in the allotted time. Supply valve partly closed, a clogged inlet screen, or a weak inlet valve.</li>
+<li><strong>H2O</strong> — no water at all. Check the supply valve under the sink is open and the hose is not kinked before touching anything else.</li>
+</ul>
+<h2>Heat faults: C6 to C8</h2>
+<p>C6 means the water never reached about 120 degrees even after the extended heating period. Run the kitchen tap until it is hot before starting the cycle — if the incoming water is cold, the heater may simply not catch up. If the dishes come out cold and wet, meter the heating element for continuity; elements are €30 to €60 and the high-limit thermostat €10 to €20. C7 is the water temperature sensor (thermistor) circuit failing — a loose plug or a cheap sensor, though on some models the same code covers the turbidity sensor instead. C8 is usually mechanical rather than thermal: the detergent cup could not open because a loaded dish was blocking it or dried detergent has jammed the latch.</p>
+<h2>888 and CFE: the board codes</h2>
+<p>When the fault is electronic rather than hydraulic, GE tells you bluntly. <a href="https://codefixcoffee.com/ge/dishwasher/888/">888</a> means the main control board failed its own self-check — often after a voltage spike from a storm corrupts a memory register, and occasionally because a leak has wet the board. <a href="https://codefixcoffee.com/ge/dishwasher/cfe/">CFE</a> means the door-mounted user interface and the main board have stopped talking, usually a chafed harness in the door hinge area or a wet connector. Both start with a breaker reset; both end in a board if the code returns, at €90 to €200 for the main board or €60 to €120 for the interface.</p>
+<h2>The service-menu trick: read the last error</h2>
+<p>A dishwasher that has been stopping for weeks often shows nothing when you stand in front of it. The board remembers, and on most GE dishwashers you can ask it:</p>
+<ol>
+<li>Open the door fully.</li>
+<li>Hold the Start button for five seconds to enter the service menu.</li>
+<li>On models where the display is hidden behind the door trim, press Select Cycle and Start together for five seconds instead.</li>
+<li>Read the last stored error off the display, then close the door.</li>
+<li>To reset the board itself, cut power at the breaker for 60 seconds.</li>
+</ol>
+<p>Note the code, clear it, and run a cycle: a stored C3 from three weeks ago plus a fresh C3 today is a real drain fault, not a glitch.</p>
+<h2>What the repairs cost</h2>
+<p>Almost every C-code fix is a pump, a valve, a sensor or a dispenser — parts between €10 and €80 — plus your own labour if you are comfortable cutting power and removing a panel. Boards are the exception at €90 to €200. A home visit from an appliance technician runs €120 to €250 for diagnosis plus the part, which is worth it for the board codes and rarely necessary for a blocked filter.</p>
+</main>
+<footer>CodeFix Blog — repair guides and appliance error-code explainers from <a href="https://codefixcoffee.com">codefixcoffee.com</a>.</footer>
+</body></html>
