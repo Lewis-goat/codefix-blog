@@ -26,15 +26,15 @@ jobs:
       - name: Ping IndexNow
         continue-on-error: true  # self-heals once DNS points at GitHub Pages
         if: steps.pub.outputs.url != ''
+        env:
+          POST_URL: ${{ steps.pub.outputs.url }}
         run: |
-          KEY=$(cat indexnow-key.txt)
-          HOST=blog.codefixcoffee.com
-          URL="${{ steps.pub.outputs.url }}"
           python3 - <<'PY'
           import json, urllib.request
-          key = open("indexnow-key.txt").read().strip()
+          import glob, os
+          key = open([f for f in glob.glob("*.txt") if len(f[:-4]) == 32][0]).read().strip()
           host = "blog.codefixcoffee.com"
-          urls = ["", f"https://{host}/"]
+          urls = [os.environ["POST_URL"], f"https://{host}/"]
           body = json.dumps({"host": host, "key": key, "keyLocation": f"https://{host}/{key}.txt", "urlList": urls}).encode()
           req = urllib.request.Request("https://api.indexnow.org/IndexNow?url=&json=true", data=body, headers={"Content-Type": "application/json; charset=utf-8"})
           try: print("indexnow", urllib.request.urlopen(req, timeout=20).status)
