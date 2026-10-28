@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DIY or repairer? Reading the difficulty honestly</title>
+<meta name="description" content="How to judge an appliance error code for DIY: severity versus difficulty, stop signals, security screws and mains voltage, and the cost maths.">
+<link rel="canonical" href="https://blog.codefixcoffee.com/post/diy-vs-repairer-when-to-stop/">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/rss.xml">
+</head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/">☕ CodeFix Blog</a><span><a href="https://codefixcoffee.com">Error-code database →</a></span></div></header>
+<main>
+<h1>DIY or repairer? Reading the difficulty honestly</h1>
+<p class="meta">2026-10-28</p>
+<p>The display is showing a code, the manual's remedy did not clear it, and now the question feels personal: do you fix this yourself or pay someone? It is mostly not a question about your skill. It is a question about the fault, and it separates into two judgements that deserve to be made independently: how dangerous is this, and how hard is the repair?</p>
+<h2>Severity is not difficulty</h2>
+<p><strong>Severity</strong> is how urgently you should stop using the machine — the risk of fire, flooding, or the fault destroying other parts on its way. <strong>Difficulty</strong> is what the repair demands of you: tools, access, and how much can go wrong on the way in. They are independent scales, and confusing them produces both panic and complacency.</p>
+<ul>
+<li><strong>Serious but manageable.</strong> <a href="https://codefixcoffee.com/ge/dishwasher/e1-leak/">E1 on a GE dishwasher</a> means the flood switch in the base has activated — high severity, and the machine stays off until the base is dry and the leak found. The first moves are still simple: shut off the water supply, cut power, pull the kick panel and dry everything.</li>
+<li><strong>Dramatic but moderate.</strong> <a href="https://codefixcoffee.com/jura/automatic-machines/error-8/">Jura Error 8</a> stops the machine dead because the brew group did not complete its cycle. It reads like a breakdown and is usually a cleaning job: most Error 8s cost a tablet.</li>
+<li><strong>Serious and genuinely hard.</strong> <a href="https://codefixcoffee.com/jura/automatic-machines/error-7/">Jura Error 7</a> — the valve never reached the position the board commanded — is one of the few Jura codes with no reliable user-level fix.</li>
+<li><strong>Off the table from the start.</strong> <a href="https://codefixcoffee.com/miele/cm-cva-machines/f77/">Miele F77</a> is an internal valve fault where the official remedy stops at a power cycle and the casing is explicitly not to be opened: internal voltages and a pressurised water system.</li>
+</ul>
+<p>The working rule: severity decides <strong>whether you stop</strong>; difficulty decides <strong>who does the work</strong>.</p>
+<h2>When a code is a stop signal</h2>
+<p>Some conditions end the DIY phase before any tools come out, whatever your confidence level:</p>
+<ul>
+<li><strong>Water where electronics live.</strong> A dishwasher flood-switch code like E1 means the machine does not run again until the base is dry and the leak traced — not "one more cycle to see".</li>
+<li><strong>A heater that will not switch off.</strong> The serious variant of a recurring over-temperature code is the power board failing to cut the heater. Treat that as a fire risk: unplug the machine and do not leave it powered unattended.</li>
+<li><strong>The manufacturer's own boundary.</strong> When a code's documented remedy is a power cycle followed by "contact service", and the manual says the casing must not be removed, that is the manufacturer telling you where its boundary — and your safety margin — sits.</li>
+<li><strong>Recurrence after a proper reset.</strong> Unplug a coffee machine for five minutes, or cut a dishwasher off at the breaker for sixty seconds. A code that returns at the same point in the cycle is a component failing its check, not a glitch.</li>
+</ul>
+<h2>Mains voltage and security screws</h2>
+<p>Access is the honest part of difficulty on coffee machines. Jura cases are held with oval-head Torx-Plus security screws, and the thermoblock terminals inside carry mains voltage. The parts for an Error 7 valve replacement are sold to anyone, but fitting one means security screws, live-side awareness and recalibrating the mechanism afterwards — the honest verdict for that code is a bench repair unless you already service these machines. If you do not own the driver, treat the casing as closed.</p>
+<p>The same discipline applies around the house. Isolate at the wall socket or the breaker, not with the machine's own switch. And never bypass a safety device: a thermal fuse exists to fail, and wiring around it to test a heater teaches you nothing you wanted to know.</p>
+<h2>The cost maths</h2>
+<p>Before choosing a road, price all three:</p>
+<ol>
+<li><strong>The free attempt.</strong> Reset, cleaning cycle, reseat the part, descale. It costs nothing, and it retires a large share of everyday codes.</li>
+<li><strong>The DIY repair.</strong> Add parts, tools and the risk of a misdiagnosis. Cleaning tablets run €15 to €25, a Jura brew group €80 to €150, and a ceramic valve assembly €60 to €150 by model.</li>
+<li><strong>The repairer.</strong> Out-of-warranty manufacturer service for a super-automatic typically lands at €250 to €500 including return shipping, and independent espresso repairers are usually cheaper for a single-part job. A home-visit appliance technician charges €120 to €250 for diagnosis plus the part.</li>
+</ol>
+<p>Then weigh the total against the machine itself. On high-end <a href="https://codefixcoffee.com/jura/">Jura</a> Z and GIGA machines even the top of the service range usually makes sense; on a ten-year-old entry E or ENA, compare the quote with a refurbished unit. Watch where labour dominates, too: on Error 7 the service labour typically exceeds the part.</p>
+<p>The code has already done its job by naming the circuit. Judge severity first and stop if it tells you to. Judge difficulty second, and let the gap between your toolbox and the repair decide who does the work.</p>
+</main>
+<footer>CodeFix Blog — repair guides and appliance error-code explainers from <a href="https://codefixcoffee.com">codefixcoffee.com</a>.</footer>
+</body></html>
