@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to read a Jura service menu safely</title>
+<meta name="description" content="What the Jura service menu shows, how to read the error counter without touching calibration, and why writing values is a bench job.">
+<link rel="canonical" href="https://blog.codefixcoffee.com/post/how-to-read-a-jura-service-menu-safely/">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/rss.xml">
+</head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/">☕ CodeFix Blog</a><span><a href="https://codefixcoffee.com">Error-code database →</a></span></div></header>
+<main>
+<h1>How to read a Jura service menu safely</h1>
+<p class="meta">2026-11-11</p>
+<p>A Jura that has thrown an error code once or twice often seems fine again after a restart, which leaves an awkward question hanging: was that a one-off glitch or the beginning of a real fault? The answer usually sits in the machine's <strong>service menu</strong> — a diagnostic layer beneath the normal coffee menu that records faults and operating statistics. Reading it is genuinely useful, and it is safe, provided you treat it like a car's odometer: a read-out of facts, not a set of dials to turn.</p>
+<h2>What the service menu actually is</h2>
+<p>The service menu (also called the engineering or technician menu) exists so repair technicians can read a machine's history without opening the case. On most generations it is reached with a button sequence held while the machine switches on, but the exact combination varies by model and production year, and Jura deliberately leaves it out of the user manual. If you are not certain of the sequence for your specific machine, it is safer to ask an official <a href="https://www.jura.com">Jura service partner</a> than to experiment: on some models, holding a different combination at power-up starts a test routine rather than a menu, and an unintended rinse or pump test is an unwelcome surprise.</p>
+<h2>What the menu can show you</h2>
+<h3>The error counter and error log</h3>
+<p>This is the most valuable screen in the menu. Most generations keep a cumulative count of faults, and many also store the most recent codes. A single entry dating back six months means something completely different from an entry that climbs every week. When the same code keeps returning, our guides to <a href="https://codefixcoffee.com/jura/automatic-machines/error-2/">Jura error 2</a>, <a href="https://codefixcoffee.com/jura/automatic-machines/error-8/">error 8</a> and <a href="https://codefixcoffee.com/jura/automatic-machines/error-6/">error 6</a> explain what each one means and how far a home fix can realistically go.</p>
+<h3>Operating counters</h3>
+<p>Brew cycles, switch-on counts, and rinse or descaling totals. This is the machine's honest maintenance record. It is worth checking before buying a second-hand Jura, and it tells you when a worn part is simply due rather than defective.</p>
+<h3>Live values, model-dependent</h3>
+<p>Some generations can display live component states while the machine runs. Treat these as gauges to look at, nothing more.</p>
+<h2>Reading it safely: five ground rules</h2>
+<ol>
+<li>Start with the machine off and cool, the water tank properly seated, and no error currently on screen. You want to note values, not debug a new fault at the same time.</li>
+<li>Photograph every screen you land on before navigating away. Displays time out, and a photo preserves exact numbers with no transcription errors.</li>
+<li>Write the date and the machine's serial number next to your notes. A reading only becomes useful as part of a time series.</li>
+<li>Navigate with short presses of the buttons you already know from the normal menu. Avoid holding a button while a value is displayed — on several generations, a long press is precisely how a value gets changed.</li>
+<li>Leave the way you came in. Exit through the menu's own exit path and let the machine settle on its normal standby screen before you unplug anything.</li>
+</ol>
+<p>One habit deserves to be named: do not reset an error counter to make a fault "go away". Resetting repairs nothing — it destroys the evidence a technician would have used.</p>
+<h2>Why writing values is a bench job</h2>
+<p>The writable settings fall into groups that are all calibrated at the factory with equipment no kitchen has.</p>
+<ul>
+<li><strong>Flow and pump parameters</strong> are set by timing measured volumes of water through the circuit. Guess a value and your 40 ml espresso can silently become something else — or the machine faults because filling takes longer than the electronics expect.</li>
+<li><strong>Temperature parameters</strong> are matched to the specific heater and sensor fitted to your unit. A wrong offset means water that is too cool (sour, weak shots) or running hotter than intended, and that second option spends a safety margin you do not own.</li>
+<li><strong>Mechanical references</strong>, such as grinder stops and brew-unit positions, are set with the machine opened up on a bench, usually right after the relevant part has been replaced.</li>
+</ul>
+<p>This is why a technician performs these steps as part of a repair, not before one. Writing a wrong value can also manufacture error codes that never existed before, which sends any diagnosis down the wrong track. Community teardowns on <a href="https://www.ifixit.com">iFixit</a> give a good sense of how much measured, patient work sits behind those innocent-looking numbers.</p>
+<h2>Putting your reading to work</h2>
+<p>A dated photo of the error counter is the best document you can hand a service partner: it shortens paid diagnostic time and often sharpens the repair estimate on the spot. If your machine is already showing a recurring code, start from our <a href="https://codefixcoffee.com/jura/">Jura repair hub</a> for model-specific guidance. And if you also run a DeLonghi, our <a href="https://codefixcoffee.com/delonghi/">DeLonghi hub</a> covers the equivalent diagnostics for that side of the counter.</p>
+</main>
+<footer>CodeFix Blog — repair guides and appliance error-code explainers from <a href="https://codefixcoffee.com">codefixcoffee.com</a>.</footer>
+</body></html>
